@@ -1,0 +1,465 @@
+/*
+Notes:
+-- Unit Conversion --
+---------------------
+* 1 rem --> 16 px | * 1 rem --> 12 pt
+
+-- CSS Styling Order System --
+------------------------------
+I use my own custom CSS Architecture for prioritizing maintainability,
+which I named it 'FoCoMUR' styling system
+* 1.Fo - Foundation  : Reset, Variables, Base Elements
+    (e.g., :root, body, h1, etc.)
+* 2.Co - Component   : BEM Blocks/Elements
+    (e.g., .navbar, .card__image, etc.)
+* 3.M - Modifier     : State/theme Overrides
+    (e.g., .button--is-active, .image--is-hidden, etc.)
+* 4.U - Utilities    : Atomic helpers
+    (e.g., .u-margin-top-10, .util-text-center, etc.)
+* 5.R - Responsive   : Mobile-first media queries
+    (e.g., @media (min-width: 768px) { ... },etc.)
+*/
+
+/*  # -------------------------------------------------- #
+    #                   Foundation                       #
+    # -------------------------------------------------- # */
+* {
+    /* --- Box Model --- */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* --- Variables --- */
+    /* *8-Point Spacing System */
+    --space-3xs: 0.125rem;  /* 2px - For Tiny Detail */
+    --space-2xs: 0.25rem;   /* 4px - For Small Detail */
+    --space-xs: 0.5rem;     /* 8px - Space between small elements */
+    --space-sm: 1rem;       /* 16px - Space between items inside a component */
+    --space-md: 1.5rem;     /* 24px - Space between paragraph or the suchlike */
+    --space-lg: 2rem;       /* 32px - Space padding inside small component */
+    --space-xl: 3rem;       /* 48px - Space padding inside section */
+    --space-2xl: 4rem;      /* 64px - Big space when needed */
+    --space-3xl: 5rem;      /* 80px - More bigger space when needed */
+    --space-4xl: 6rem;      /* 96px - Extra big space when needed */
+    --space-5xl: 7rem;      /* 128px - Extra big space when needed */
+    --space-6xl: 8rem;      /* 160px - Extra big space when needed */
+
+    /* *Typographic Scale System */
+    --font-size-xs: 0.75rem;    /* 12px or 9pt */
+    --font-size-sm: 0.875rem;   /* 14px or 10.5pt */
+    --font-size-base: 1rem;     /* 16px or 12pt */
+    --font-size-md: 1.25rem;    /* 20px or 15pt */
+    --font-size-lg: 1.5rem;     /* 24px or 18pt */
+    --font-size-xl: 2rem;       /* 32px or 24pt */
+    --font-size-2xl: 2.5rem;    /* 40px or 30pt */
+    --font-size-3xl: 3rem;      /* 48px or 36pt */
+    --font-size-4xl: 3.5rem;    /* 56px or 42pt */
+
+    /* *Line Height */
+    --line-height-tight: 1.2;   /* Line spacing for heading text (h1,h2,h3,etc.) */
+    --line-height-normal: 1.6;  /* Line spacing for body text */
+    --line-height-loose: 2;     /* Optional line spacing for large text blocks */
+
+    /* *Radius Value */
+    --radius-xs: 0.125rem;  /* 2px - For small elements */
+    --radius-sm: 0.25rem;   /* 4px - For medium */
+    --radius-base: 0.5rem;  /* 8px - For large elements */
+    --radius-lg: 0.75rem;   /* 12px - For large elements */
+    --radius-xl: 1rem;      /* 16px - For extra large elements */
+    --radius-2xl: 1.5rem;   /* 24px - For extra large elements */
+
+    /* *Coloring */
+    --color-light-gray: rgb(230, 230, 230);
+    --color-light-blue: rgb(32, 114, 202);
+    --color-light-red: rgb(251, 70, 70);
+    --color-light-violet: rgb(207, 159, 255);
+    --color-solid-black: rgb(0, 0, 0);
+    --color-solid-white: rgb(255, 255, 255);
+}
+
+html {
+    /* --- Interaction, Animation, & Misc --- */
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem; /* 128px - For smooth scroll offset */
+}
+
+body {
+    /* --- Typography --- */
+    font-family: 'Arial', sans-serif;
+    line-height: var(--line-height-normal);
+    background-color: var(--color-solid-white);
+}
+
+hr {
+    /* --- Box Model Properties --- */
+    margin-bottom: var(--space-sm);
+    border: none;
+    border-top: 0.125rem solid var(--color-solid-black);
+}
+
+/*  # -------------------------------------------------- #
+    #                   Component                        #
+    # -------------------------------------------------- # */
+
+/* -# Theme & Reusable Ruleset #- */
+
+.section-container {
+    /* --- Box Model --- */
+    margin-bottom: var(--space-lg);
+    padding: var(--space-lg);
+    border-radius: var(--radius-base);
+
+    /* --- Visual & Appearance --- */
+    background-color: var(--color-solid-white);
+    box-shadow: 0 0.125rem 0.625rem 0.125rem rgba(0, 0, 0, 0.1);
+}
+.section-title {
+    /* --- Typography --- */
+    font-size: var(--font-size-lg);
+    font-weight: bold;
+    color: var(--color-solid-black);
+    line-height: var(--line-height-tight);
+}
+.section-subtitle {
+    /* --- Typography --- */
+    font-size: var(--font-size-md);
+    font-weight: bold;
+    color: var(--color-light-black);
+    line-height: var(--line-height-tight);
+}
+.subtitle-descriptor {
+    /* --- Typography --- */
+    font-size: var(--font-size-md);
+    font-weight: bold;
+    font-style: italic;
+    color: var(--color-light-black);
+    line-height: var(--line-height-normal);
+}
+.description-text {
+    /* --- Typography --- */
+    font-size: var(--font-size-base);
+    font-weight: normal;
+    color: var(--color-solid-black);
+    line-height: var(--line-height-normal);
+    text-align: left;
+}
+.points-container {
+    /* --- Box Model --- */
+    margin-bottom: var(--space-md);
+    padding-left: var(--space-lg);
+}
+.point-item {
+    /* --- Typography --- */
+    font-size: var(--font-size-base);
+    font-weight: normal;
+    color: var(--color-solid-black);
+    line-height: var(--line-height-normal);
+
+    /* --- List Style --- */
+    list-style-type: disc;
+}
+
+/* -# Application-Specific Ruleset #- */
+
+.page-header {
+    /* --- Layout & Positioning --- */
+    position: sticky; /* Tetap di atas saat scroll */
+    top: 0; /* Tetap di atas viewport */
+    z-index: 10; /* Pastikan tetap di atas elemen lain */
+
+    /* --- Box Model --- */
+    padding: var(--space-sm) var(--space-md) var(--space-md);
+
+    /* --- Visual & Appearance --- */
+    background-color: var(--color-solid-white);
+    box-shadow: 0 0.125rem 0.625rem 0.125rem rgba(0, 0, 0, 0.1);
+}
+
+.cv-main-content {
+    /* --- Layout & Positioning --- */
+    max-width: 1400px; /* Batasi lebar konten utama */
+
+    /* --- Box Model --- */
+    margin: var(--space-md) auto var(--space-xl);
+    padding: var(--space-xl);
+
+    /* --- Visual & Appearance --- */
+    background-color: var(--color-light-gray);
+    border-radius: var(--radius-base);
+    box-shadow: 0 0.125rem 0.625rem 0.125rem rgba(0, 0, 0, 0.1);
+}
+
+/* --# Navigation Menu #-- */
+.nav-menu {
+    /* --- Box Model --- */
+    padding: var(--space-xs);
+    border-radius: 0.5rem;
+
+    /* --- Visual & Appearance --- */
+    background-color: var(--color-light-gray);
+    box-shadow: 0 0.125rem 0.625rem 0.125rem rgba(0, 0, 0, 0.1);
+}
+.nav-menu__list-container {
+    /* --- Layout & Positioning --- */
+    display: flex;
+    gap: var(--space-5xl);
+    justify-content: center; /* <-- Ditambahkan untuk menengahkan item flex */
+    
+    /* --- Typography --- */
+    list-style: none;
+}
+.nav-menu__link {
+    /* --- Box Model --- */
+    padding: var(--space-2xs) var(--space-xs);
+    border-radius: var(--radius-sm);
+
+    /* --- Typography --- */
+    font-size: var(--font-size-base);
+    font-weight: bold;
+    color: var(--color-light-blue);
+    text-decoration: none;
+}
+
+/* --# Personal Information #-- */
+.personal-info {
+    /* --- Typography --- */
+    text-align: center;
+}
+.personal-info__full-name {
+    /* --- Typography --- */
+    font-size: var(--font-size-xl);
+    font-weight: bold;
+    color: var(--color-solid-black);
+    line-height: var(--line-height-tight);
+}
+.personal-info__job-title {
+    /* --- Typography --- */
+    font-size: var(--font-size-lg);
+    font-weight: bold;
+    color: var(--color-light-black);
+    line-height: var(--line-height-tight);
+}
+.personal-info__contact {
+    /* --- Layout & Positioning --- */
+    display: flex;
+    flex-wrap: wrap; /* Izinkan item turun ke baris baru jika tidak cukup ruang */
+    justify-content: center; /* Menengahkan item dalam baris */
+    align-items: center; /* Menjaga item tetap sejajar secara vertikal */
+    gap: var(--space-3xs); /* Jarak antar item */
+
+    /* --- Typography --- */
+    font-size: var(--font-size-base);
+    font-weight: normal;
+    color: var(--color-solid-black);
+    line-height: var(--line-height-normal);
+}
+.personal-info__contact-link {
+    /* --- Layout & Positioning --- */
+    display: inline-block; /* Membuat elemen berperilaku seperti blok tapi tetap sebaris */
+
+    /* --- Box Model --- */
+    padding: var(--space-2xs) var(--space-2xs);
+    border-radius: var(--radius-sm) ;
+
+    /* --- Typography --- */
+    color: var(--color-light-blue);
+    text-decoration: none;
+}
+
+/* --# Summary Section #-- */
+.summary { 
+    /* NOTE: Linter placeholder for future overrides. */
+    --placeholder: ;
+}
+.summary__title {
+    /* NOTE: Linter placeholder for future overrides. */
+    --placeholder: ;
+}
+.summary__description {
+    /* NOTE: Linter placeholder for future overrides. */
+    --placeholder: ;
+}
+
+/* --# Working Experience Section #-- */
+.work-exp {
+    /* NOTE: Linter placeholder for future overrides. */
+    --placeholder: ;
+}
+.work-exp__title {
+    /* NOTE: Linter placeholder for future overrides. */
+    --placeholder: ;
+}
+.work-exp__company-name {
+    /* NOTE: Linter placeholder for future overrides. */
+    --placeholder: ;
+}
+.work-exp__job-occupation {
+    /* NOTE: Linter placeholder for future overrides. */
+    --placeholder: ;
+}
+.work-exp__points-container {
+    /* NOTE: Linter placeholder for future overrides. */
+    --placeholder: ;
+}
+.work-exp__point-item {
+    /* NOTE: Linter placeholder for future overrides. */
+    --placeholder: ;
+}
+
+/* --# Organization Experience Section #-- */
+.org-exp {
+    /* NOTE: Linter placeholder for future overrides. */
+    --placeholder: ;
+}
+.org-exp__title {
+    /* NOTE: Linter placeholder for future overrides. */
+    --placeholder: ;
+}
+.org-exp__institution-name{
+    /* NOTE: Linter placeholder for future overrides. */
+    --placeholder: ;
+}
+.org-exp__job-occupation {
+    /* NOTE: Linter placeholder for future overrides. */
+    --placeholder: ;
+}
+.org-exp__points-container {
+    /* NOTE: Linter placeholder for future overrides. */
+    --placeholder: ;
+}
+.org-exp__point-item {
+    /* NOTE: Linter placeholder for future overrides. */
+    --placeholder: ;
+}
+
+/* --# Education Section #-- */
+.education {
+    /* NOTE: Linter placeholder for future overrides. */
+    --placeholder: ;
+}
+.education__title {
+    /* NOTE: Linter placeholder for future overrides. */
+    --placeholder: ;
+}
+.education__institution-name {
+    /* NOTE: Linter placeholder for future overrides. */
+    --placeholder: ;
+}
+.education__field-of-study {
+    /* NOTE: Linter placeholder for future overrides. */
+    --placeholder: ;
+} 
+.education__points-container {
+    /* NOTE: Linter placeholder for future overrides. */
+    --placeholder: ;
+}
+.education__point-item {
+    /* NOTE: Linter placeholder for future overrides. */
+    --placeholder: ;
+}
+
+/* --# Skills #-- */
+.skills {
+    /* NOTE: Linter placeholder for future overrides. */
+    --placeholder: ;
+}
+.skills__title{
+    /* NOTE: Linter placeholder for future overrides. */
+    --placeholder: ;
+}
+.skills__category-name {
+    /* NOTE: Linter placeholder for future overrides. */
+    --placeholder: ;
+}
+.skills__description {
+    /* --- Box Model --- */
+    margin-bottom: var(--space-md);
+}
+
+/* --# Footer #-- */
+.footer-text {
+    /* --- Box Model --- */
+    margin-bottom: var(--space-md);
+    /* --- Typography --- */
+    font-size: var(--font-size-sm);
+    font-weight: normal;
+    color: var(--color-light-black);
+    line-height: var(--line-height-normal);
+
+    /* --- Layout & Positioning --- */
+    text-align: center;
+}
+
+/*  # -------------------------------------------------- #
+    #                   Modifier                         #
+    # -------------------------------------------------- # */
+
+/* -# Animations & Interaction #- */
+
+/* --# Hover FX: Sweep to Bottom #-- */
+/* cr: Adapted from Hover.css by Ian Lunn */
+.hvr-sweep-to-bottom {
+    display: inline-block; /* Membuat elemen berperilaku seperti blok tapi tetap sebaris */
+    vertical-align: middle; /* Menjaga alignment vertikal */
+    position: relative; /* Konteks untuk pseudo-element ::before */
+    transition: color 0.3s ease-out; /* Transisi untuk warna teks */
+    isolation: isolate; /* Memastikan pseudo-element ::before tidak keluar dari elemen induknya secara tidak sengaja */
+}
+.hvr-sweep-to-bottom::before {
+    content: ""; /* Wajib untuk pseudo-element */
+    position: absolute; /* Diposisikan relatif terhadap .hvr-sweep-to-bottom */
+    z-index: -1; /* Ditempatkan di belakang teks */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--color-light-blue); /* Warna 'tirai' kita */
+    border-radius: inherit; /* Menggunakan radius yang sama dengan elemen induk */
+    transform: scaleY(0); /* Awalnya, tirai digulung (skala tinggi 0) */
+    transform-origin: 50% 0; /* Titik awal animasi dari atas-tengah */
+    transition: transform 0.2s ease-out; /* Transisi untuk animasi 'tirai' */
+}
+.hvr-sweep-to-bottom:hover, 
+.hvr-sweep-to-bottom:focus {
+    color: var(--color-solid-white); /* Ubah warna teks saat di-hover */
+}
+.hvr-sweep-to-bottom:hover::before,
+.hvr-sweep-to-bottom:focus::before {
+    transform: scaleY(1); /* Turunkan tirai (skala tinggi 100%) */
+}
+
+/* --# Hover FX: Fade In/Out #-- */
+/* cr: Adapted from Hover.css by Ian Lunn */
+.hvr-fade {
+    /* > Normal State < */
+    background-color: transparent;
+    color: var(--color-light-blue);
+    transition: all 0.3s ease;
+}
+
+.hvr-fade:visited {
+    color: var(--color-light-violet);
+    background: var(--color-light-violet);
+}
+
+.hvr-fade:hover,
+.hvr-fade:focus {
+    color: var(--color-solid-white);
+    background-color: var(--color-light-blue);
+}
+
+.hvr-fade:visited:hover,
+.hvr-fade:visited:focus {  
+    color: var(--color-solid-white);
+    background-color: var(--color-light-violet);
+}
+
+/*  # -------------------------------------------------- #
+    #                  Utilities                         #
+    # -------------------------------------------------- # */
+
+/*  # -------------------------------------------------- #
+    #              Responsive Media                      #
+    # -------------------------------------------------- # */

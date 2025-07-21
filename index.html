@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<title>F.End Learning Day 05 - ATS CV CSS Box Model</title>
+    
+<link
+        rel="stylesheet"
+        href="styling.css"/>
+</head>
+
+<body>
+<!-- # HEADER -->
+<header class="page-header" role="banner">
+    <!-- -# Navigation Bar -->  
+    <nav class="nav-menu">
+        <ul class="nav-menu__list-container">
+            <li>
+                <a class="nav-menu__link hvr-sweep-to-bottom" 
+                    href="#summary">Summary</a>
+            </li>
+            <li>
+                <a class="nav-menu__link hvr-sweep-to-bottom" 
+                    href="#work-exp">Working Experience</a>
+            </li>
+            <li>
+                <a class="nav-menu__link hvr-sweep-to-bottom"
+                    href="#org-exp">Organization Experience</a>
+            </li>
+            <li>
+                <a class="nav-menu__link hvr-sweep-to-bottom"
+                    href="#education">Educational Background</a>
+            </li>
+            <li>
+                <a class="nav-menu__link hvr-sweep-to-bottom"
+                    href="#skills">Skills</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- -# _______________ -->
+</header>
+<!-- # End of Header -->
+
+<!-- # MAIN -->
+<main class="cv-main-content">
+    <!-- -# Personal Information -->
+    <section
+        class="section-container personal-info"
+        id="personal-info"
+        role="region"
+        aria-label="Personal Information">
+        <!-- --# Full Name -->
+        <h1 class="personal-info__full-name"
+            aria-label="Full Name">
+            Randy Limpaty
+        </h1>
+
+        <!-- --# Position/Job Occupation -->
+        <p class="personal-info__job-title"
+            aria-label="Current Position/Job Occupation">
+            Junior Front-End Developer
+        </p>
+
+        <!-- --# Domicile & Contact Information -->
+        <address class="personal-info__contact" 
+            role="region"
+            aria-label="Domicile and Contact Information">
+            
+            <span aria-label="I live in">
+                Surabaya, Indonesia 
+            </span>
+
+            |
+
+            <a class="personal-info__contact-link hvr-fade"
+                aria-label="Contact me via WhatsApp"
+                href="https://wa.me/+6281315063600"
+                title="Contact me via WhatsApp" 
+                target="_blank">
+                (WhatsApp)
+            </a>
+
+            +62 813-1506-3600 |
+
+            <a class="personal-info__contact-link hvr-fade"
+                aria-label="Send me an email"
+                href="mailto:randy.limpaty@gmail.com"
+                title="Send me an email"
+                target="_blank">
+                (Email)
+            </a>
+
+            randy.limpaty@gmail.com |
+
+            <a class="personal-info__contact-link hvr-fade"
+                aria-label="Visit my LinkedIn profile"
+                href="https://linkedin.com/in/misael-randy-limpaty/"
+                title="Visit my LinkedIn profile"
+                target="_blank">
+                (LinkedIn)
+            </a>
+
+            Misael Randy Limpaty |
+
+            <a class="personal-info__contact-link hvr-fade"
+                aria-label="Visit my GitHub profile"
+                href="https://github.com/elmyosotiscode"
+                title="Visit my GitHub profile"
+                target="_blank">
+                (GitHub)
+            </a>
+
+            ElMyosotisCode
+        </address>
+    </section>
+    <!-- -# ____________________ -->
+
+    <!-- -# Summary Section -->
+    <article class="section-container summary"
+        id="summary"
+        aria-label="Professional Summary"
+        role="region">
+
+        <h2 class="section-title summary__title">
+            SUMMARY
+        </h2>
+        <hr>
+
+        <p class="description-text summary__description">
+            An eager to learn, detail-oriented and passionate Junior Front End Developer
+            with a Computer Engineering Bachelor's Degree.
+            Proficient in designing and developing website interfaces
+            using HTML, CSS, and JavaScript, along with frameworks like TailwindCSS and React.JS.
+            Eager to contribute to developing innovative and user-friendly web solutions.
+        </p>
+    </article>
+    <!-- -# _______________ -->
+
+    <!-- -# Working Experience Section -->
+    <article class="section-container work-exp"
+        id="work-exp"
+        aria-label="Working Experience"
+        role="region">
+
+        <h2 class="section-title work-exp__title">
+            WORKING EXPERIENCE
+        </h2>
+        <hr>
+
+        <!-- --# Job Experience 1 -->
+        <h3 class="section-subtitle work-exp__company-name"
+            aria-label="1st Job Experience">
+            FREELANCER CLIENT PROJECT - Remote, Indonesia
+        </h3>
+
+        <p class="subtitle-descriptor work-exp__job-occupation">
+            Digital Product Designer 
+            <time datetime="2025-02-01/2025-06-30">
+                (February 2025 - June 2025)
+            </time>
+        </p>
+
+        <ul class="points-container work-exp__points-container"
+            aria-label="Brief Points of 1st Job Experience">
+            <li class="point-item work-exp__points-item">
+                Designed 3 major poster campaigns (30 layouts in total) using a 3×3 grid to optimize
+                information flow and visual impact.
+            </li>
+            <li class="point-item work-exp__points-item">
+                Integrated AI tools (DeepSeek R1, Leonardo.AI, Tensor.Art) to accelerate concept-to-final
+                workflow by 30%.
+            </li>
+            <li class="point-item work-exp__points-item">
+                Utilized Adobe Photoshop & Canva for high-fidelity outputs maintaining brand consistency
+                from playful to elegant themes.
+            </li>
+        </ul>
+    </article>
+    <!-- -# __________________________ -->
+
+    <!-- -# Organization Experience Section -->
+    <article class="section-container org-exp"
+        id="org-exp"
+        aria-label="Organization Experience"
+        role="region">
+
+        <h2 class="section-title org-exp__title">
+            ORGANIZATION EXPERIENCE
+        </h2>
+        <hr>
+
+        <!-- --# Organization Experience 1 -->
+        <h3 class="section-subtitle org-exp__institution-name"
+            aria-label="1st Organization Experience">
+            HIMPUNAN MAHASISWA TEKNIK KOMPUTER (HIMATEKKOM) - ITS, Surabaya, Indonesia
+        </h3>
+
+        <p class="subtitle-descriptor org-exp__job-occupation">
+            Head of the Academic Division of the Student Welfare Department 
+            <time datetime="2021-03-01/2022-03-31">
+                (March 2021 - March 2022)
+            </time>
+        </p>
+
+        <ul class="points-container org-exp__points-container"
+            aria-label="Brief Points of 1st Organization Experience">
+            <li class="point-item org-exp__points-item">
+                Partnered with 2 internal divisions (administrative and data management) within Student Welfare department
+                for executing 4+ welfare projects according to schedule.
+            </li>
+            <li class="point-item org-exp__points-item">
+                Enhanced Computer Engineering students academic performance through coordinated 5+ mentoring online
+                sessions on core subjects, and achieving 70% participant satisfaction (post-mentoring survey).
+            </li>
+            <li class="point-item org-exp__points-item">
+                Liaised between 30+ Computer Engineering students and campus Student Council to streamline tuition refund procedures, 
+                ensuring compliance with ≤10 semester credit units (SKS) eligibility policies during thesis/bootcamp periods.
+            </li>
+            <li class="point-item org-exp__points-item">
+                Executed cross-cohort data collection (200+ students from freshman to 6th academic year) utilizing
+                Google Sheets to optimize scholarship allocations and mentorship targeting
+            </li>
+        </ul>
+
+        <!-- --# Organization Experience 2 -->
+        <h3 class="section-subtitle org-exp__job-institution-name"
+            aria-label="2nd Organization Experience">
+            MULTIMEDIA AND GAME EVENT (MAGE 5-6) - ITS, Surabaya, Indonesia
+        </h3>
+
+        <p class="subtitle-descriptor org-exp__job-occupation">
+            PR Senior Staff, MAGE 6 
+            <time datetime="2021">
+                (2021)
+            </time>
+            | PR Junior Staff, MAGE 5
+            <time datetime="2022">
+                (2022)
+            </time>
+        </p>
+
+        <ul class="points-container org-exp__points-container"
+            aria-label="Brief Points of 2nd Organization Experience">
+            <li class="point-item org-exp__points-item">
+                Drove social media engagement via 20+ interactive Q&A Stories (MAGE 5).
+            </li>
+            <li class="point-item org-exp__points-item">
+                Mentored 5 juniors in MAGE 6 to design social media content about the virtual event, via audience-centric strategies
+                (interactive Q&As and targeted message updates) during pandemic constraints.
+            </li>
+            <li class="point-item org-exp__points-item">
+                Managed 3 social media platforms (IG, LINE, WhatsApp) to resolve 100+ public inquiries related to MAGE and Computer
+                Engineering with less than 24h response time.
+            </li>
+            <li class="point-item org-exp__points-item">
+                Supported cross-team operations to ensure 100% on-schedule delivery for 5 competition categories (avg. 20+ teams each).
+            </li>
+        </ul>
+    </article>
+    <!-- -# _______________________________ -->
+    
+    <!-- -# Educational Background -->
+    <article 
+        class="section-container education"
+        id="education">
+
+        <h2 class="section-title education__title">
+            EDUCATION
+        </h2>
+        <hr>
+
+        <!-- --# Education 1 -->
+        <h3 class="section-subtitle education__institution-name">
+            Formal | Institute of Technology Sepuluh Nopember (ITS) - Surabaya, Indonesia
+            <time datetime="2018-08/2024-09">
+                (August 2018 - September 2024)
+            </time>
+        </h3>
+
+        <p class="subtitle-descriptor education__field-of-study"
+            aria-label="Degree">
+            Bachelor of Computer Engineering - GPA 3.09/4.00
+        </p>
+
+        <ul class="points-container education__points-container">
+            <li class="point-item education__points-item">
+                Developed programming foundational skills in problem-solving, system analysis, and debugging through hardware/software projects.
+            </li>
+            <li class="point-item education__points-item">
+                Applied algorithmic principles to optimize code efficiency through various programming simulations (C, C++, C#, Kotlin).
+            </li>
+        </ul>
+
+        <!-- --# Education 2 -->
+        <h3 class="section-subtitle education__institution-name">
+            Non-Formal | Self-Led Learning
+            <time datetime="2024-12/Present">
+                (December 2024 - Present)
+            </time>
+        </h3>
+
+        <p class="subtitle-descriptor education__field-of-study"
+            aria-label="Focus">
+            Entry Front-End Developer
+        </p>
+
+        <ul class="points-container education__points-container">
+            <li class="point-item education__points-item">
+                Developed 5+ practical projects with HTML/CSS/JavaScript.
+                <br>[Portfolio Site]
+            </li>
+            <li class="point-item education__points-item">
+                Utilized the Frontend Developer learning path from roadmap.sh website to build core competencies.
+                <br>[Modern CSS, React, Tailwind, API Integration]
+            </li>
+            <li class="point-item education__points-item">
+                Leveraged AI pair-programming for cleaner code refactoring and bug resolution.
+                <br>[GitHub Copilot, DeepSeek R1, Google AI Studio]
+            </li>
+        </ul>
+    </article>
+    <!-- -# ______________________ -->
+
+    <!-- -# Skills -->
+    <article class="section-container skills"
+        id="skills"
+        aria-label="Skills"
+        role="region">
+
+        <h2 class="section-title skills__title">
+            SKILLS
+        </h2>
+        <hr>
+
+        <!-- --# Technical Skills -->
+        <h3 class="section-subtitle skills__category-name">
+            Technical Skills
+        </h3>
+
+        <p class="description-text skills__description"
+            aria-label="includes">
+            HTML, CSS, JavaScript, TailwindCSS, React.js, Responsive Design.
+        </p>
+
+        <!-- --# Tools -->
+        <h3 class="section-subtitle skills__category-name">
+            Tools & Technologies
+        </h3>
+
+        <p class="description-text skills__description"
+            aria-label="includes">
+            VS Code, Figma, Chrome DevTools, REST API Integration, GitHub, GitHub Copilot.
+        </p>
+
+        <!-- --# UI/UX Design -->
+        <h3 class="section-subtitle skills__category-name">
+            UI/UX Design Skills
+        </h3>
+
+        <p class="description-text skills__description"
+            aria-label="includes">
+            Wireframing & Prototyping (Figma).
+        </p>
+
+        <!-- --# Additional Skills -->
+        <h3 class="section-subtitle skills__category-name">
+            Additional Skills
+        </h3>
+
+        <p class="description-text skills__description"
+            aria-label="includes">
+            Problem-Solving, Teamwork, Communication, Agile Methodology.
+        </p>
+    </article>
+    <!-- -# _____ -->
+</main>
+<!-- # End of Main -->
+</div>
+
+<!-- # FOOTER -->
+<footer>
+    <!-- -# Copyright Info -->
+    <p class="footer-text">
+        &copy; June 2025, Misael Randy Limpaty
+    </p>
+    <!-- -# ______________ -->
+</footer>
+<!-- # End of Footer -->
+</body>
+
+</html>
