@@ -29,15 +29,15 @@ In this project finalization session, I did some Visual Tweaks, such as: ✌
 
 ## Screenshots
 
-![Web Page Screenshot 01](https://github.com/ElMyosotisCode/webdev-lrn-fe-005-cv-css-box-model/blob/main/images/webpage-screenshot-01.JPG)
+![Web Page Screenshot 01](https://github.com/ElMyosotisCode/lrn-fe-005-cv-css-box-model/blob/main/images/webpage-screenshot-01.JPG)
 
-![Web Page Screenshot 02](https://github.com/ElMyosotisCode/webdev-lrn-fe-005-cv-css-box-model/blob/main/images/webpage-screenshot-02.JPG)
+![Web Page Screenshot 02](https://github.com/ElMyosotisCode/lrn-fe-005-cv-css-box-model/blob/main/images/webpage-screenshot-02.JPG)
 
-![Web Page Screenshot 03](https://github.com/ElMyosotisCode/webdev-lrn-fe-005-cv-css-box-model/blob/main/images/webpage-screenshot-03.JPG)
+![Web Page Screenshot 03](https://github.com/ElMyosotisCode/lrn-fe-005-cv-css-box-model/blob/main/images/webpage-screenshot-03.JPG)
 
-![Web Page Screenshot 04](https://github.com/ElMyosotisCode/webdev-lrn-fe-005-cv-css-box-model/blob/main/images/webpage-screenshot-04.JPG)
+![Web Page Screenshot 04](https://github.com/ElMyosotisCode/lrn-fe-005-cv-css-box-model/blob/main/images/webpage-screenshot-04.JPG)
 
-![Web Page Screenshot 05](https://github.com/ElMyosotisCode/webdev-lrn-fe-005-cv-css-box-model/blob/main/images/webpage-screenshot-05.JPG)
+![Web Page Screenshot 05](https://github.com/ElMyosotisCode/lrn-fe-005-cv-css-box-model/blob/main/images/webpage-screenshot-05.JPG)
 
 ## Roadmap
 
