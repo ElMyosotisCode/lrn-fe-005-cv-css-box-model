@@ -17,7 +17,9 @@
 <!-- # HEADER -->
 <header class="page-header" role="banner">
     <!-- -# Navigation Bar -->  
-    <nav class="nav-menu">
+    <nav 
+        class="nav-menu"
+        aria-label="Internal Page Navigation">
         <ul class="nav-menu__list-container">
             <li>
                 <a class="nav-menu__link hvr-sweep-to-bottom" 
@@ -54,14 +56,14 @@
         role="region"
         aria-label="Personal Information">
         <!-- --# Full Name -->
-        <h1 class="personal-info__full-name"
-            aria-label="Full Name">
+        <h1 class="personal-info__full-name">
+            <span class="sr-only">Full Name: </span>
             Randy Limpaty
         </h1>
 
         <!-- --# Position/Job Occupation -->
-        <p class="personal-info__job-title"
-            aria-label="Current Position/Job Occupation">
+        <p class="personal-info__job-title">
+            <span class="sr-only">Current Position/Job Occupation: </span>
             Junior Front-End Developer
         </p>
 
@@ -70,14 +72,11 @@
             role="region"
             aria-label="Domicile and Contact Information">
             
-            <span aria-label="I live in">
-                Surabaya, Indonesia 
-            </span>
-
+            <span class="sr-only">I live in: </span>
+                Surabaya, Indonesia
             |
-
             <a class="personal-info__contact-link hvr-fade"
-                aria-label="Contact me via WhatsApp"
+                aria-label="You may contact me via WhatsApp"
                 href="https://wa.me/+6281315063600"
                 title="Contact me via WhatsApp" 
                 target="_blank">
@@ -87,7 +86,7 @@
             +62 813-1506-3600 |
 
             <a class="personal-info__contact-link hvr-fade"
-                aria-label="Send me an email"
+                aria-label="Send me an email to"
                 href="mailto:randy.limpaty@gmail.com"
                 title="Send me an email"
                 target="_blank">
@@ -97,7 +96,7 @@
             randy.limpaty@gmail.com |
 
             <a class="personal-info__contact-link hvr-fade"
-                aria-label="Visit my LinkedIn profile"
+                aria-label="Visit my LinkedIn profile at"
                 href="https://linkedin.com/in/misael-randy-limpaty/"
                 title="Visit my LinkedIn profile"
                 target="_blank">
@@ -107,7 +106,7 @@
             Misael Randy Limpaty |
 
             <a class="personal-info__contact-link hvr-fade"
-                aria-label="Visit my GitHub profile"
+                aria-label="Visit my GitHub profile at"
                 href="https://github.com/elmyosotiscode"
                 title="Visit my GitHub profile"
                 target="_blank">
@@ -122,10 +121,12 @@
     <!-- -# Summary Section -->
     <article class="section-container summary"
         id="summary"
-        aria-label="Professional Summary"
+        aria-labelledby="summary-section-title"
         role="region">
 
-        <h2 class="section-title summary__title">
+        <h2 
+            class="section-title summary__title"
+            id="summary-section-title">
             SUMMARY
         </h2>
         <hr>
@@ -143,17 +144,19 @@
     <!-- -# Working Experience Section -->
     <article class="section-container work-exp"
         id="work-exp"
-        aria-label="Working Experience"
+        aria-labelledby="work-exp-section-title"
         role="region">
 
-        <h2 class="section-title work-exp__title">
+        <h2 
+            class="section-title work-exp__title"
+            id="work-exp-section-title">
             WORKING EXPERIENCE
         </h2>
         <hr>
 
         <!-- --# Job Experience 1 -->
-        <h3 class="section-subtitle work-exp__company-name"
-            aria-label="1st Job Experience">
+        <h3 class="section-subtitle work-exp__company-name">
+            <span class="sr-only">My 1st Job Experience is: </span>
             FREELANCER CLIENT PROJECT - Remote, Indonesia
         </h3>
 
@@ -185,17 +188,19 @@
     <!-- -# Organization Experience Section -->
     <article class="section-container org-exp"
         id="org-exp"
-        aria-label="Organization Experience"
+        aria-labelledby="org-exp-section-title"
         role="region">
 
-        <h2 class="section-title org-exp__title">
+        <h2 
+            class="section-title org-exp__title"
+            id="org-exp-section-title">
             ORGANIZATION EXPERIENCE
         </h2>
         <hr>
 
         <!-- --# Organization Experience 1 -->
-        <h3 class="section-subtitle org-exp__institution-name"
-            aria-label="1st Organization Experience">
+        <h3 class="section-subtitle org-exp__institution-name">
+            <span class="sr-only">My 1st Organization Experience is at: </span>
             HIMPUNAN MAHASISWA TEKNIK KOMPUTER (HIMATEKKOM) - ITS, Surabaya, Indonesia
         </h3>
 
@@ -227,8 +232,8 @@
         </ul>
 
         <!-- --# Organization Experience 2 -->
-        <h3 class="section-subtitle org-exp__job-institution-name"
-            aria-label="2nd Organization Experience">
+        <h3 class="section-subtitle org-exp__job-institution-name">
+            <span class="sr-only">My 2nd Organization Experience is at: </span>
             MULTIMEDIA AND GAME EVENT (MAGE 5-6) - ITS, Surabaya, Indonesia
         </h3>
 
@@ -266,27 +271,34 @@
     <!-- -# Educational Background -->
     <article 
         class="section-container education"
-        id="education">
+        id="education"
+        aria-labelledby="education-section-title"
+        role="region">
 
-        <h2 class="section-title education__title">
+        <h2 
+            class="section-title education__title"
+            id="education-section-title">
             EDUCATION
         </h2>
         <hr>
 
         <!-- --# Education 1 -->
         <h3 class="section-subtitle education__institution-name">
+            <span class="sr-only">My 1st Education is: </span>
             Formal | Institute of Technology Sepuluh Nopember (ITS) - Surabaya, Indonesia
             <time datetime="2018-08/2024-09">
                 (August 2018 - September 2024)
             </time>
         </h3>
 
-        <p class="subtitle-descriptor education__field-of-study"
-            aria-label="Degree">
+        <p class="subtitle-descriptor education__field-of-study"></p>
+            <span class="sr-only">My field of study is: </span>
             Bachelor of Computer Engineering - GPA 3.09/4.00
         </p>
 
-        <ul class="points-container education__points-container">
+        <ul 
+            class="points-container education__points-container"
+            aria-label="Brief Points of what I learned during this education period:">
             <li class="point-item education__points-item">
                 Developed programming foundational skills in problem-solving, system analysis, and debugging through hardware/software projects.
             </li>
@@ -297,18 +309,21 @@
 
         <!-- --# Education 2 -->
         <h3 class="section-subtitle education__institution-name">
+            <span class="sr-only">My 2nd Education is: </span>
             Non-Formal | Self-Led Learning
             <time datetime="2024-12/Present">
                 (December 2024 - Present)
             </time>
         </h3>
 
-        <p class="subtitle-descriptor education__field-of-study"
-            aria-label="Focus">
-            Entry Front-End Developer
+        <p class="subtitle-descriptor education__field-of-study">
+            <span class="sr-only">My focus of self-led study is: </span>
+            Entry Front-End Web Developer
         </p>
 
-        <ul class="points-container education__points-container">
+        <ul 
+            class="points-container education__points-container"
+            aria-label="Brief Points of what I learned during this self-led study period:">
             <li class="point-item education__points-item">
                 Developed 5+ practical projects with HTML/CSS/JavaScript.
                 <br>[Portfolio Site]
@@ -328,10 +343,12 @@
     <!-- -# Skills -->
     <article class="section-container skills"
         id="skills"
-        aria-label="Skills"
+        aria-labelledby="skills-section-title"
         role="region">
 
-        <h2 class="section-title skills__title">
+        <h2 
+            class="section-title skills__title"
+            id="skills-section-title">
             SKILLS
         </h2>
         <hr>
@@ -341,8 +358,8 @@
             Technical Skills
         </h3>
 
-        <p class="description-text skills__description"
-            aria-label="includes">
+        <p class="description-text skills__description">
+            <span class="sr-only">includes: </span>
             HTML, CSS, JavaScript, TailwindCSS, React.js, Responsive Design.
         </p>
 
@@ -351,8 +368,8 @@
             Tools & Technologies
         </h3>
 
-        <p class="description-text skills__description"
-            aria-label="includes">
+        <p class="description-text skills__description">
+            <span class="sr-only">includes: </span>
             VS Code, Figma, Chrome DevTools, REST API Integration, GitHub, GitHub Copilot.
         </p>
 
@@ -361,8 +378,8 @@
             UI/UX Design Skills
         </h3>
 
-        <p class="description-text skills__description"
-            aria-label="includes">
+        <p class="description-text skills__description">
+            <span class="sr-only">includes: </span>
             Wireframing & Prototyping (Figma).
         </p>
 
@@ -371,8 +388,8 @@
             Additional Skills
         </h3>
 
-        <p class="description-text skills__description"
-            aria-label="includes">
+        <p class="description-text skills__description">
+            <span class="sr-only">includes: </span>
             Problem-Solving, Teamwork, Communication, Agile Methodology.
         </p>
     </article>
